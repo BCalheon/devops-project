@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")  # Endpoint raiz
 def home():
-    return "Hello, DevOps World!"  # Requisito: saudação simples
+    return "Hello, DevOps World! Teste CI/CD"  # Requisito: saudação simples
 
 @app.route("/info")  # Endpoint de diagnóstico
 def info():
