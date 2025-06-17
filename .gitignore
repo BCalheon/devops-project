@@ -1,0 +1,36 @@
+# =============== Node.js ===============
+node_modules/
+npm-debug.log
+.env
+
+# =============== Python ===============
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+
+# =============== Terraform ===============
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+crash.log
+
+# =============== Ansible ===============
+*.retry
+*.vault
+
+# =============== Docker ===============
+*.log
+docker-compose.override.yml
+
+# =============== VSCode/Codespaces ===============
+.devcontainer/.env
+.vscode/
+*.code-workspace
+
+# =============== Sistema Operacional ===============
+.DS_Store
+Thumbs.db
+*.swp
