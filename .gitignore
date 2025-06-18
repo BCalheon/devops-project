@@ -33,4 +33,6 @@ docker-compose.override.yml
 # =============== Sistema Operacional ===============
 .DS_Store
 Thumbs.db
-*.swp
+*.swpoci_api_key.pem
+oci_api_key.pem
+terraform.tfvars
