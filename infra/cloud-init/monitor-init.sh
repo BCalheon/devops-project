@@ -6,4 +6,4 @@ systemctl start docker
 
 git clone https://github.com/BCalheon/devops-project.git /opt/app
 cd /opt/app
-docker compose -f docker-compose.app.yml up -d
+docker compose -f docker-compose.monitor.yml up -d
