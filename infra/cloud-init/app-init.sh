@@ -9,7 +9,7 @@ systemctl enable docker
 systemctl start docker
 
 # Clona seu repositório com o projeto (altere a URL para seu repo)
-git clone https://github.com/seuusuario/devops-project-main.git /opt/app
+git clone https://github.com/BCalheon/devops-project.git /opt/app
 
 # Vai para a pasta onde está o docker-compose.app.yml
 cd /opt/app
