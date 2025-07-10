@@ -4,7 +4,7 @@ services:
   app:
     build: ./app
     ports:
-      - "8000:8000"
+      - "8080:8080"  # mapear a porta 8080 externa para a 8080 do container
 
   nginx:
     image: nginx:latest

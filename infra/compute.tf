@@ -6,12 +6,8 @@ data "oci_identity_availability_domains" "ads" {
 resource "oci_core_instance" "single_server" {
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   compartment_id      = var.compartment_ocid
-  shape               = "VM.Standard.A1.Flex"
+  shape               = "VM.Standard.E2.1.Micro"
 
-  shape_config {
-    ocpus         = 1
-    memory_in_gbs = 6
-  }
 
   subnet_id    = var.subnet_ocid
   display_name = "devops-app-vm"
@@ -36,12 +32,8 @@ resource "oci_core_instance" "single_server" {
 resource "oci_core_instance" "monitor_server" {
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   compartment_id      = var.compartment_ocid
-  shape               = "VM.Standard.A1.Flex"
+  shape               = "VM.Standard.E2.1.Micro"
 
-  shape_config {
-    ocpus         = 1
-    memory_in_gbs = 6
-  }
 
   subnet_id    = var.subnet_ocid
   display_name = "devops-monitor-vm"
@@ -58,6 +50,6 @@ resource "oci_core_instance" "monitor_server" {
 
   metadata = {
     ssh_authorized_keys = file(var.ssh_public_key_path)
-    user_data           = base64encode(file("cloud-init/monitor-init.sh"))
+    user_data           = base64encode(file("cloud-init/app-init.sh"))
   }
 }
